@@ -75,7 +75,8 @@
                 "\u{1F559}" +  // 10:00
                 "\u{1F565}" + 
                 "\u{1F55a}" +  // 11:00
-                "\u{1F566}";
+                "\u{1F566}" +
+                "\u{1F55b}";   // 12:00
 
             function updateTime() {
                 const minutesPerHour = 60;
@@ -91,8 +92,7 @@
 
                 var clock = clocks.substr(index * 2, 2);
 
-                timeElement.textContent = clock
-                timeElement.setAttribute("title", "U+" + clock.codePointAt(0).toString(16));
+                timeElement.textContent = clock;
             }
 
             document.addEventListener("DOMContentLoaded", function () {
@@ -103,6 +103,6 @@
         </script>
     </head>
     <body class="borderless fill">
-        <abbr id="time" class="fill center scaleToViewport"></abbr>
+        <div id="time" class="fill center scaleToViewport"></div>
     </body>
 </html>
